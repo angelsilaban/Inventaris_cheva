@@ -1,0 +1,60 @@
+/* HERO */
+.hero {
+  margin: 0 ;
+  padding-top: 10rem;
+  background-image: url(../images/hero.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  min-height: 130vh;
+}
+/* TENTANG PEMBUKUAN */
+.tentang-pembukuan {
+  margin-top: 0;
+}
+.tentang-pembukuan .section-title::after {
+  content: '';
+  display: block;
+  width: 25%;
+  height: 3px;
+  background-color: #F7A400;
+  margin-top: 1rem;
+}
+
+/* PEMBUKUAN */
+.pembukuan {
+  background-color: #F7A400;
+}
+.pembukuan .card-link .card {
+  background-color: #fff;
+  transition: .3s;
+}
+.pembukuan .card-link .card:hover {
+  transform: translateY(-20px);
+}
+.pembukuan .card-link .card img {
+  transform: translateY(-50%);
+}
+
+/* FOOTER */
+footer h4::after {
+  content: '';
+  display: block;
+  width: 25%;
+  height: 2px;
+  background-color: #F7A400;
+  margin-top: 0.5rem;
+}
+footer .footer-social-media a {
+  color: #555;
+}
+footer .footer-social-media a:hover i {
+  color: #F7A400;
+}
+footer ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+footer ul li a:hover {
+  text-decoration: underline;
+}

@@ -2,52 +2,44 @@
 <html lang="en">
 
 <head>
-  <!-- required meta tags  -->
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pembukuan Chevalier</title>
-
-  <!-- bootstrap CSS -->
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
   <script src="https://kit.fontawesome.com/cce5ebab8a.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/index.css">
 </head>
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+    <nav class="navbar navbar-expand-lg fixed-top align-items-center" id="navbar">
       <div class="container">
         <div class="d-flex align-items-center">
           <img src="assets//images/logo_cheva.png" alt="Logo Chevalier Lab" class="img-fluid" width="40">
-          <a class="navbar-brand fw-bold" href="#">Chevalier</a>
+          <a class="navbar-brand fw-bold text-dark" href="#">Chevalier</a>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ms-auto gap-4">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#">Tentang</a>
-            <a class="nav-link" href="#">Pembukuan</a>
-            <a class="nav-link" href="#">Login</a>
+          <div class="navbar-nav ms-auto gap-4 align-items-center">
+            <a class="nav-link" aria-current="page" href="#beranda">Beranda</a>
+            <a class="nav-link" href="#tentang">Tentang</a>
+            <a class="nav-link" href="#pembukuan">Pembukuan</a>
+            <a class="nav-link login-btn" href="login.html">
+              <button class="btn btn-primary px-4 py-1 rounded-4"><small class="fw-bold">Login</small></button>
+            </a>
           </div>
         </div>
       </div>
     </nav>
   </header>
 
-  <main>
+  <main data-bs-spy="scroll" data-bs-target="#navbar">
     <!-- HERO -->
-    <section class="hero position-relative">
+    <section id="beranda" class="hero position-relative">
       <!-- <img src="assets/images/hero.svg" alt="" class="img-fluid position-absolute top-0 end-0 w-50"> -->
       <div class="container">
         <div class="w-50 mb-5">
@@ -65,7 +57,7 @@
     <!-- END OF HERO -->
 
     <!-- TENTANG PEMBUKUAN -->
-    <section class="tentang-pembukuan">
+    <section id="tentang" class="tentang-pembukuan">
       <div class="container">
         <div class="row">
           <div class="col">
@@ -83,7 +75,7 @@
     <!-- END OF TENTANG PEMBUKUAN -->
 
     <!-- PEMBUKUAN -->
-    <section class="pembukuan py-5">
+    <section id="pembukuan" class="pembukuan">
       <div class="container">
         <h1 class="fw-black text-center text-light">PEMBUKUAN</h1>
         <div class="row gx-4 pt-5 mt-5">
@@ -175,6 +167,9 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
   <script>
     // SCROLL NAVBAR EVENT
     window.onscroll = function () {
@@ -184,8 +179,10 @@
     function scrollFunction() {
       if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
         document.getElementById("navbar").classList.add("navbar-scrolled");
+        // document.getElementById("navbar").classList.remove("navbar-dark");
       } else {
         document.getElementById("navbar").classList.remove("navbar-scrolled");
+        // document.getElementById("navbar").classList.add("navbar-dark");
       }
     }
   </script>

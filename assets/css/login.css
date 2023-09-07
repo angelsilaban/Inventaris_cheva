@@ -1,0 +1,27 @@
+:root {
+  --primary : #F7A400;
+  --secondary : #A0741E;
+}
+body {
+  max-height: 100vh;
+  overflow-y: hidden;
+}
+main {
+  background-image: url(../images/login.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  height: 100vh;
+  max-height: 100vh;
+}
+
+input:focus {
+  border-color: var(--primary) !important;
+}
+
+.lupa-password-btn {
+  color: var(--primary);
+}
+.container {
+  place-items: center end;
+}

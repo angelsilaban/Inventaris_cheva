@@ -1,87 +1,182 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- required meta tags  -->
 
-    <meta charset="utf-8">
-    <title>Pembukuan Chevalier</title>
+<head>
+  <meta charset="utf-8">
+  <title>Pembukuan Chevalier</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/cce5ebab8a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/login.css">
 
-    <!-- bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap" rel="stylesheet">
+</head>
 
-    <style>
-        body {
-          font-family: 'Inter';
-        }
-        .title {
-          color: #F7A400;
-        }
-        .desc {
-          color: #F7A400;
-        }
-        .forgot {
-          color: #F7A400;
-        }
-        .choosen {
-          color: #F7A400;
-        }
+<body>
 
-    </style>
-  </head>
-  <body>
-    <div class="container float-md-start">
-      <div class="row">
-        <div class="col">
-          <img src="images/gambar_login2.png" alt="login" width="85%" height="100%">
-        </div>
-        <div class="col-md-4 m-auto mt-5 align-content-center">
-            <div class="card border-warning border-3 rounded-3">
-              <br>
-              <h3 class="title text-center">
-                <b>Selamat Datang !</b>
-              </h3>
-              <p class="desc text-center">
-                Sign in to your Account
-              </p>
-              <form>
-                <div class="input-group p-3">
-                  <span class="input-group-text rounded-5 rounded-end border-warning" id="basic-addon1">
-                    <img src="images/Logo.png" width="24" height="24">
-                  </span>
-                  <input type="text" class="form-control rounded-5 rounded-start border-warning" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                </div>
-                <div class="password input-group p-3">
-                  <span class="input-group-text rounded-5 rounded-end border-warning" id="basic-addon1">
-                    <img src="images/lock.png" width="24" height="24">   
-                  </span>
-                  <input type="password" class="form-control rounded-5 rounded-start border-warning" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <a href="#"  aria-current="page">
-                  <p class="forgot text-center">
-                    Forgot Password?
-                  </p>
-                </a>
-                <div class="button text-center p-3 col">
-                  <button type="submit" class="btn btn-warning btn-sm rounded-5" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .9rem; --bs-btn-font-size: .75rem; color: white;">
-                    Sign in
-                  </button>
-                  <button type="submit" class="btn btn-outline-warning btn-sm rounded-5" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .9rem; --bs-btn-font-size: .75rem;">
-                    Sign up
-                  </button>
-                  <br><br>
-                  <p class="choosen">Or Log in With</p>
-                  <img src="images/google.png" width="40" height="40">
-                  <img src="images/fb.png" width="40" height="40">
-                </div>
-              </form>
+  <main class="position-relative">
+    <div class="container h-100 d-grid">
+      <div class="card w-50 text-center p-5 h-100 border-0">
+        <!-- LOGIN CARD -->
+        <div class="login-card card-content my-auto">
+          <a href="/" class="kembali-beranda-btn d-flex color-primary align-items-center gap-1 mb-4 text-decoration-none text-start">
+            <small><i class="fa-solid fa-house"></i></small>
+            <small><u>Beranda</u></small>
+          </a>
+          <div>
+            <div class="d-flex align-items-center justify-content-center">
+              <img src="assets/images/logo_cheva.png" alt="Logo Chevalier" class="img-fluid">
+              <!-- <h5 class="fw-bold m-0">Chevalier</h5> -->
             </div>
+            <h1>Selamat Datang!</h1>
+            <p>Masuk ke akun <span class="color-primary">Chevalier Lab</span> Anda</p>
+          </div>
+          <div class="card-body">
+            <form method="post">
+              <div class="d-flex align-items-center mb-3 position-relative border rounded-pill ps-4 gap-1">
+                <div class="icon-container"><i class="fa-solid fa-user"></i></div>
+                <input type="text" class="form-control rounded-pill border-0 shadow-none" id="nama-pengguna"
+                  placeholder="Nama Pengguna" onfocus="this.parentElement.classList.add('border-primary')"
+                  onfocusout="this.parentElement.classList.remove('border-primary')">
+              </div>
+              <div class="d-flex align-items-center mb-1 position-relative border rounded-pill ps-4 gap-1">
+                <div class="icon-container"><i class="fa-solid fa-lock"></i></div>
+                <input type="password" class="form-control rounded-pill border-0 shadow-none" id="kata-sandi"
+                  placeholder="Kata Sandi" onfocus="this.parentElement.classList.add('border-primary')"
+                  onfocusout="this.parentElement.classList.remove('border-primary')">
+              </div>
+              <div class="text-end"><a href="#" class="lupa-password-btn"><small class="">Lupa password?</small></a></div>
+              <button type="submit"
+                class="btn btn-primary mt-4 d-block w-100 rounded-pill bgcolor-primary border-primary">Masuk</button>
+            </form>
+          </div>
         </div>
+        <!-- END OF  LOGIN CARD -->
+        
+        
+        <!-- LUPA PASSWORD CARD -->
+        <div class="lupa-password-card d-none card-content my-auto">
+          <a href="#" class="kembali-login-btn d-flex color-primary align-items-center gap-2 mb-4 text-decoration-none text-start">
+            <small><i class="fa-solid fa-arrow-left"></i></small>
+            <small><u>Kembali ke Login</u></small>
+          </a>
+          <div>
+            <div class="d-flex align-items-center justify-content-center">
+              <img src="assets/images/logo_cheva.png" alt="Logo Chevalier" class="img-fluid">
+              <!-- <h5 class="fw-bold m-0">Chevalier</h5> -->
+            </div>
+            <h1>Lupa Kata Sandi?</h1>
+            <p>Masukkan email/nomor telepon anda</p>
+          </div>
+          <div class="card-body">
+            <form method="post">
+              <div class="d-flex align-items-center mb-3 position-relative border rounded-pill ps-4 gap-1">
+                <div class="icon-container"><i class="fa-solid fa-user"></i></div>
+                <input type="text" class="form-control rounded-pill border-0 shadow-none" id="email-notelp"
+                  placeholder="Email / No. Telepon" onfocus="this.parentElement.classList.add('border-primary')"
+                  onfocusout="this.parentElement.classList.remove('border-primary')">
+              </div>
+              <button class="kirim-emailno-btn btn btn-primary mt-4 d-block w-100 rounded-pill bgcolor-primary border-primary">Kirim</butt>
+            </form>
+          </div>
+        </div>
+        <!-- END OF LUPA PASSWORD CARD -->
+        
+        
+        <!-- OTP CARD -->
+        <div class="otp-card d-none card-content my-auto">
+          <a href="#" class="kembali-login d-flex color-primary align-items-center gap-2 mb-4 text-decoration-none text-start">
+            <small><i class="fa-solid fa-arrow-left"></i></small>
+            <small><u>Kembali ke Login</u></small>
+          </a>
+          <div>
+            <div class="d-flex align-items-center justify-content-center px-5">
+              <img src="assets/images/otp.svg" alt="Logo Chevalier" class="img-fluid">
+            </div>
+            <h1>Masukkan Kode OTP</h1>
+            <p class="small">Kami sudah mengirimkan kode OTP, segera periksa email/no. telepon Anda</p>
+          </div>
+          <div class="card-body">
+            <form method="post">
+              <div class="d-flex align-items-center mb-3 position-relative border rounded-pill ps-4 gap-1">
+                <div class="icon-container"><i class="fa-solid fa-envelope-open-text"></i></div>
+                <input type="text" class="form-control rounded-pill border-0 shadow-none" id="kode-otp"
+                  placeholder="XXXX" onfocus="this.parentElement.classList.add('border-primary')"
+                  onfocusout="this.parentElement.classList.remove('border-primary')">
+              </div>
+              <div class="kirim-otp-btn btn btn-primary mt-4 d-block w-100 rounded-pill bgcolor-primary border-primary">Kirim</div>
+            </form>
+          </div>
+        </div>
+        <!-- END OF OTP CARD -->
+
+
+        <!-- RESET PASSWORD CARD -->
+        <div class="reset-card d-none card-content my-auto">
+          <a href="#" class="kembali-login d-flex color-primary align-items-center gap-2 mb-4 text-decoration-none text-start">
+            <small><i class="fa-solid fa-arrow-left"></i></small>
+            <small><u>Kembali ke Login</u></small>
+          </a>
+          <div>
+            <div class="d-flex align-items-center justify-content-center px-5">
+              <img src="assets/images/reset-password.svg" alt="Logo Chevalier" class="img-fluid" style="max-height: 15rem;">
+            </div>
+            <h1>Ubah Kata Sandi</h1>
+          </div>
+          <div class="card-body">
+            <form method="post">
+              <div class="d-flex align-items-center mb-3 position-relative border rounded-pill ps-4 gap-1">
+                <div class="icon-container"><i class="fa-solid fa-lock"></i></div>
+                <input type="password" class="form-control rounded-pill border-0 shadow-none" id="kata-sandi-baru"
+                  placeholder="Kata Sandi Baru" onfocus="this.parentElement.classList.add('border-primary')"
+                  onfocusout="this.parentElement.classList.remove('border-primary')">
+              </div>
+              <div class="d-flex align-items-center mb-3 position-relative border rounded-pill ps-4 gap-1">
+                <div class="icon-container"><i class="fa-solid fa-lock"></i></div>
+                <input type="password" class="form-control rounded-pill border-0 shadow-none" id="konfirmasi-kata-sandi"
+                  placeholder="Konfirmasi Kata Sandi" onfocus="this.parentElement.classList.add('border-primary')"
+                  onfocusout="this.parentElement.classList.remove('border-primary')">
+              </div>
+              <button type="submit"
+                class="kirim-otp-btn btn btn-primary mt-4 d-block w-100 rounded-pill bgcolor-primary border-primary">Kirim</button>
+            </form>
+          </div>
+        </div>
+        <!-- END OF RESET PASSWORD CARD -->
       </div>
     </div>
-  </body>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script>
+    const loginCard = document.querySelector('.login-card')
+    const lupaPasswordCard = document.querySelector('.lupa-password-card')
+    const otpCard = document.querySelector('.otp-card')
+    const resetCard = document.querySelector('.reset-card')
+
+    document.querySelector('.lupa-password-btn').addEventListener("click", function(){
+      lupaPasswordCard.classList.remove('d-none')
+      loginCard.classList.add('d-none')
+      otpCard.classList.add('d-none')
+      resetCard.classList.add('d-none')
+    });
+    document.querySelectorAll('.kembali-login-btn').forEach(() => {
+      this.addEventListener("click", function(){
+        loginCard.classList.remove('d-none')
+        lupaPasswordCard.classList.add('d-none')
+        otpCard.classList.add('d-none')
+        resetCard.classList.add('d-none')
+      });
+    })
+    document.querySelector('.kirim-emailno-btn').addEventListener("click", function(e){
+      otpCard.classList.remove('d-none')
+      loginCard.classList.add('d-none')
+      lupaPasswordCard.classList.add('d-none')
+      resetCard.classList.add('d-none')
+      e.preventDefault()
+    });
+  </script>
+</body>
+
 </html>
